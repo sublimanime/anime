@@ -213,6 +213,7 @@ figure.img.vacia figcaption { display: block; font: 600 12px/1.35 "Poppins", Ari
 .te-llevas { font-size: 18px; font-weight: 700; text-align: center; color: var(--primario); background: var(--acento-letra); border-radius: 6px; padding: 6px 10px; margin: 0 0 14px; }
 .plan-lista { font-size: 15px; line-height: 1.4; margin-bottom: 20px; }
 .plan-lista p + p { margin-top: 8px; }
+.plan-lista .extra-valor { font-size: 13px; color: var(--lila); font-weight: 500; white-space: nowrap; }
 .plan-lista .sep { font-size: 13px; font-weight: 700; letter-spacing: .05em; color: var(--acento); margin-top: 14px; }
 .plan-precio { font-size: 64px; font-weight: 700; line-height: 1.05; color: var(--verde-precio); text-align: center; }
 .tarjeta-completo .plan-precio { color: #fff; }
@@ -587,22 +588,23 @@ fbq('track','ViewContent',{content_name:'+45.000 diseños estilo anime listos pa
   </div>
 </section>
 
-<!-- Plan completo: se muestra solo cuando CONFIG.ENLACE_COMPLETO tiene el enlace de Hotmart.
-     PENDIENTE: confirmar qué incluye y su imagen. -->
+<!-- Plan completo: se muestra solo cuando CONFIG.ENLACE_COMPLETO tiene el enlace de Hotmart. -->
 <section class="sec oferta-2" id="plan-completo" hidden>
   <div class="col">
     <p class="solo-hoy">OFERTA VÁLIDA SOLO POR HOY</p>
     <div class="tarjeta tarjeta-completo">
       <p class="pildora pildora-2">PLAN COMPLETO:</p>
       <p class="mas-vendido">(EL MÁS VENDIDO)</p>
-      <figure class="img" style="--ar:1/1"><img src="imagenes/plan-completo.webp" width="1024" height="1024" alt="Plan completo" loading="lazy" decoding="async"><figcaption>PLAN COMPLETO · PENDIENTE</figcaption></figure>
-      <p class="plan-nombre">+45.000 Diseños Anime — Plan Completo</p>
-      <p class="plan-intro">Si quieres llevarte <strong>[PENDIENTE: lo que suma el plan completo]</strong>, esta es la opción para ti.</p>
+      <figure class="img" style="--ar:1/1"><img src="imagenes/plan-completo.webp" width="1024" height="1024" alt="Plan completo: el pack de diseños anime con mockups y plantillas de medidas" loading="lazy" decoding="async"><figcaption>PLAN COMPLETO</figcaption></figure>
+      <p class="plan-nombre">Mega Colección Anime Pro — Plan Completo</p>
+      <p class="plan-intro">Si quieres llevarte <strong>los diseños y además las herramientas para venderlos antes de fabricarlos</strong>, esta es la opción para ti.</p>
       <div class="plan-lista">
         <p>✅ <strong>Todo el Plan Básico y sus +45.000 diseños</strong></p>
         <p>✅ <strong>Los 5 bonos del Plan Básico</strong></p>
-        <p>✅ <strong>[PENDIENTE: extra 1]</strong></p>
-        <p>✅ <strong>[PENDIENTE: extra 2]</strong></p>
+        <p class="sep">+ 3 EXTRAS EXCLUSIVOS</p>
+        <p>✅ <strong>Pack de mockups para vender:</strong> tazas, camisetas y cojines listos para publicar tus productos sin fabricarlos primero <span class="extra-valor">(valor $<span data-c="EXTRA_1"></span>)</span></p>
+        <p>✅ <strong>Plantillas de medidas exactas:</strong> taza 11 oz, camiseta, cojín y termo, para que el diseño nunca salga cortado <span class="extra-valor">(valor $<span data-c="EXTRA_2"></span>)</span></p>
+        <p>✅ <strong>Soporte prioritario por correo:</strong> te respondo primero a ti <span class="extra-valor">(valor $<span data-c="EXTRA_3"></span>)</span></p>
         <p>✅ Acceso inmediato y de por vida</p>
       </div>
       <p class="plan-precio">$<span data-c="PRECIO_COMPLETO"></span></p>
@@ -750,7 +752,7 @@ fbq('track','ViewContent',{content_name:'+45.000 diseños estilo anime listos pa
   // ════════════════════════════════════════════════════════════════════
   const CONFIG = {
     PRECIO_BASICO: "6.95",
-    PRECIO_COMPLETO: "9.99",
+    PRECIO_COMPLETO: "9.95",
     ANCLA_PRECIO: "97.00",
     BONO_1: "97.00",
     BONO_2: "127.00",
@@ -758,10 +760,13 @@ fbq('track','ViewContent',{content_name:'+45.000 diseños estilo anime listos pa
     BONO_4: "117.00",
     BONO_5: "77.00",
     VALOR_TOTAL_BASICO: "662.00",   // ancla + los 5 bonos
-    VALOR_TOTAL_COMPLETO: "",       // PENDIENTE
+    EXTRA_1: "97.00",               // extras exclusivos del plan completo
+    EXTRA_2: "77.00",
+    EXTRA_3: "87.00",
+    VALOR_TOTAL_COMPLETO: "923.00", // valor básico + los 3 extras
     GARANTIA_DIAS: 7,
     ENLACE_BASICO: "https://pay.hotmart.com/X105158312P?off=svhlhkd1&checkoutMode=10",
-    ENLACE_COMPLETO: "",            // PENDIENTE: al ponerlo, aparece la tarjeta del plan completo
+    ENLACE_COMPLETO: "https://pay.hotmart.com/X105158312P?off=87dv7wjk&checkoutMode=10",  // vacío = tarjeta oculta
     CONTADOR_MINUTOS: 30,
     // Datos legales (PENDIENTE): aparecen en la política de privacidad.
     RESPONSABLE: "[PENDIENTE: nombre del responsable]",
